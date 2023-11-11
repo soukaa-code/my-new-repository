@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Soukaina">
+        <meta name="description" content="This is a general survey">
+        <link href="images/icon.jpg" rel="icon" type="image/x-icon">
+        <title>Survey page</title>
+        <link href="stylesheet.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <header>
+            <h1>Survey Form</h1>
+            <p>Please note : We highely recommend for every user to fill out this survey entirely in order to provide us with the necessary information that would allow us to have a conclusion .</p>
+            <p>No private information required , we only want every user to answer the questions in sincere manner.</p>
+        </header>
+        <hr>
+        <main>
+             <form action="/submit_form.php" method="get">
+                <fieldset>
+                    <legend><mark>Tell us about yourself</mark></legend>
+                    <p>
+                        <label for="age">How old are you?</label>
+                        <input id="age" name="age" type="text" pattern="[1-9]{1}[1-9]{1}[1-9]{1}" placeholder="18" >
+                    </p>
+                    <p>
+                        <label for="food">What is your favourite food?</label>
+                        <input id="food" name="food" type="text"  placeholder="pizza">
+                    </p>
+                    <p>
+                        <label for="hobby">What is/are your hobbie(s)?</label>
+                        <input id="hobby" name="hobby" type="text" >
+                    </p>
+                    <p>
+                        <label for="country">Where do you live?</label>
+                        <input type="text" name="country of residence" id="country" placeholder="Spain">
+                    </p>
+                    <p>
+                        Who do you share your living with?
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" id="family" name="members you live with" value="family">
+                        <label for="family">Family</label>
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" id="alone" name="members you live with" value="alone">
+                        <label for="alone">Alone</label>
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" id="friends" name="members you live with" value="friends">
+                        <label for="friends">Friends</label>
+                        <br>
+                    </p>
+                    <p>
+                        <label for="languages">How many languages do you speak?</label>
+                        <input id="languages" name="number of languages" type="number" step="1" min="1" max="100" value="1">
+                    </p>
+                    <p>
+                       <label for="languagess"> What are these languages ?</label>
+                       <textarea id="languagess" name="type of languages"  placeholder="type here the languages you speak" cols="75" rows="3" ></textarea>
+                    </p>
+                    <p>
+                    <label for="countryoption">What is your favourite country&sol;city and why?</label>
+                    <textarea id="countryoption" name="favourite contry city"  cols="75" rows="7" placeholder="Try to write a small paragraph answering this question"></textarea>
+                    </p>
+                </fieldset>
+                <fieldset>
+                    <legend><mark>Tell us about your environment</mark></legend>
+                    <p>
+                        <label for="people">What are the people like in your country?</label>
+                        <input id="people" type="text" name="type of people" placeholder="give 2 adjectives" >
+                    </p>
+                    <p>
+                        <label for="culture">Can you give some of the most popular aspects of your home culture?</label>
+                        <textarea id="culture" name="culture"  cols="75" rows="7"></textarea>
+                    </p>
+                    <p>
+                        <label for="culturetochange">What are some of the cultural things that you would like to change?</label>
+                        <textarea rows="7" cols="75" id="culturetochange" name="culture to change" ></textarea>
+                    </p>
+                    <p>
+                        <label for="pollution">How much is pollution affecting your environment?</label>
+                        <input id="pollution" type="text" name="scale of pollution impact" list="pollution-scale">
+                        <datalist id="pollution-scale">
+                            <option value=" on an extremely high scale">
+                            <option value=" on a high scale">
+                            <option value="on a medium scale">
+                            <option value="on a small scale">
+                            <option value="not at all WE ARE GOOD 😊 ">
+                        </datalist>
+                    </p>
+                    <p>
+                        <label for="studies">What is the average level of studies in your country?</label>
+                        
+                        <select id="studies" name="level of studies">
+                            <option selected>Elementary school</option>
+                            <option>High school</option>
+                            <option>Higher studies&lpar;university , technical studies, ..&rpar;</option>
+                        </select> 
+                    </p>
+                    <p>
+                        <label for="read">Do people in your country read ?</label>
+                        <select id="read">
+                            <option >yes</option>
+                            <option >no</option>
+                            <option>yes but not a lot</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label>
+                            What methods do people in your country use to read?
+                        </label>
+                        <select>
+                            <option>
+                                Traditional books
+                            </option>
+                            <optgroup label="Digital gadgets">
+                                 <option>Cell-phone</option>
+                                 <option >Laptop</option>
+                                 <option>Tablet or Ipad</option>
+                                 <option >Kindle readers</option>
+                                
+                            </optgroup>
+                            
+                        </select>
+                    </p>
+                    <p>
+                        <label for="typeofbook">What type of books are commonly read by people of your country?</label>
+                        <input id="typeofbook" name="type of common books" type="text">
+                    </p>
+                    
+                </fieldset>
+                <fieldset>
+                    <legend><mark>Scientific personal survey</mark></legend>
+                    <p>
+                        <label>What does <strong>science</strong> as a <em>term</em> mean to you?</label>
+                        <textarea rows="7" cols="75" id="meaning" name="meaning of science" placeholder="Type your answer here"></textarea>
+                    </p>
+                    <p>
+                        <label for="impact">What do you think the impact of science is ?</label>
+                        <textarea id="impact" name="science impact" rows="7" cols="75" placeholder="Type your answer here"></textarea>
+                    </p>
+                    <p>
+                        <label for="humanity">Do you think science is with or agianst humanity? Feel free to elaborate your idea</label>
+                        <textarea id="humanity" name="science and humanity relation" rows="7" cols="75" placeholder="Type your answer here"></textarea>
+                    </p>
+                    <p>
+                        <label for="sciencetype">Are you more into experimental science or abstract science?</label>
+                        <input id="sciencetype" name="abstract/experimental type" type="text" >
+
+                    </p>
+                    
+                    <p>
+                        <label for="difference">What do you think the difference is between abstract science and experimental science?</label>
+                        <br>
+                        <textarea cols="75" rows="7" id="difference" placeholder="Type your answer here" name="difference between two types of science"></textarea>
+                    </p>
+
+                </fieldset>
+                <button type="submit">Submit</button>
+                <button type="reset">Clear all</button>
+             </form>
+        </main>
+        <br>
+        <footer>
+            <p>Thank you for taking this small survey that will help us improve some realities.WE appreciate your time spent to provide us with the correct and honest information </p>
+            <br><br><br><br>
+            <p><a href="#">Back to top</a></p>
+            <p>&copy;Survey2023</p>
+        </footer>
+    </body>
+</html>
